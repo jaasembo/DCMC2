@@ -1,0 +1,41 @@
+<div class="container">
+      <div class="row">
+<div class="col-md-2 col-md-offset-1">
+    <h3><?= __('Anouncements') ?></h3>
+    <ul class="nav nav-stacked nav-pills">
+        <li><?= $this->Html->link(__('Edit Doctor')) ?> </li>
+        <li><?= $this->Form->postLink(__('Delete Doctor')) ?> </li>
+        <li><?= $this->Html->link(__('List Doctors')) ?> </li>
+        <li><?= $this->Html->link(__('New Doctor')) ?> </li>
+    </ul>
+</div>
+<div class="col-md-2">
+<div class="media">
+<div class="media-body">
+<?php //debug($results);die;?>
+  <?php  foreach ($results as $key=>$ul)://debug($ul);die;//debug($results);die; ?>
+  <h3><?php echo $ul->doctors[0]['lastname'];//die; ?></h3>
+  <h4 class="media-heading"><strong>Radiology Services</strong></h4>
+    <?php foreach ($ul->doctors as $OnSchedule):?>
+	<h3><?php echo// $OnSchedule->OnSchedule==1;//debug($OnSchedule);die; ?></h3>
+   <a href="#">
+    <?php if($OnSchedule->OnSchedule==1){ ?><?php  echo  $this->html->image($ul->doctors[0]['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?><?php } ?>
+     </a>
+	<hr>
+	<strong><?= h($OnSchedule->firstname) ?><strong>
+	<strong><?= h($OnSchedule->lastname) ?><strong>
+              <hr>
+				</div>
+				</div>
+			
+				
+			
+    </div>
+	
+	<?php endforeach; ?>
+	<?php endforeach; ?>
+	
+	</div>
+	</div>
+	
+

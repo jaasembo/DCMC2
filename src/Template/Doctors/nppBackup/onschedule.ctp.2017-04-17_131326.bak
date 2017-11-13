@@ -1,0 +1,18 @@
+ <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_info">
+				<?php  foreach ($results as $key=>$ul)://debug($ul);die;//debug($results);die; ?>
+    <?php foreach ($ul->doctors as $OnSchedule):?>
+				
+                  <li><a><i class="fa fa-home"></i><p class="btn btn-primary btn-xs"><?= h($OnSchedule->firstname) ?></p><span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      
+                    </ul>
+                  
+                </ul>
+				<?php endforeach; ?>
+	            <?php endforeach; ?>
+				 </div>
+            </div>
+    
+ 

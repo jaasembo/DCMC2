@@ -1,0 +1,31 @@
+<div class="col-lg-2 well">
+	
+ <h4 class="media-heading"><strong><button type="button" class="btn btn-info btn-md btn3d">peds(all Day)</button></strong></h4>
+ <div class="thumbnail text-left">
+<ul class="list-group">
+ <li class="list-group-item list-group-item-success"><h6 class="media-heading">CONSULTATION</strong></h6></li>
+  <li class="list-group-item list-group-item-success"><h6 class="media-heading">FLUOROSCOPY</strong></h6></li>
+<li class="list-group-item list-group-item-success"><h6 class="media-heading">HOSPITAL & ED</strong></h6></li>
+ <li class="list-group-item list-group-item-success"><h6 class="media-heading">SEDATION</strong></h6></li>
+ </ul>
+</div>
+<div class="thumbnail text-left">
+ 
+ 
+   <a href="#">
+  <?php foreach ($docs as $doc=>$value) :?>
+     <?php //debug($value);die;?>
+   <?php //foreach ($value->doctors as $test):?>
+   <?php //debug($value);die;?>
+   <?php //if($OnSchedule->OnSchedule==1&& $OnSchedule->dept_id==3){ ?>
+<hr><?php echo  $this->html->image($value->photo,array('width'=>'94px','class'=>"img-circle img-responsive")); ?><hr><br />
+<?php echo  debug($announc);die; ?>
+<?php echo $announc['PICC_insertion']; ?>
+<?php// } ?>
+              
+     </a>
+     <hr>
+	 <?php// endforeach;?>
+	 <?php endforeach;?>
+	</div>
+	</div>

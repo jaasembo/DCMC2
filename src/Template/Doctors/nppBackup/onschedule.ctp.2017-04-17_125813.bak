@@ -1,0 +1,332 @@
+<div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+<div class="right_col" role="main">
+          <div class="row tile_count">
+		  <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+		   <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="index.html">Dashboard</a></li>
+                      <li><a href="index2.html">Dashboard2</a></li>
+                      <li><a href="index3.html">Dashboard3</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="form.html">General Form</a></li>
+                      <li><a href="form_advanced.html">Advanced Components</a></li>
+                      <li><a href="form_validation.html">Form Validation</a></li>
+                      <li><a href="form_wizards.html">Form Wizard</a></li>
+                      <li><a href="form_upload.html">Form Upload</a></li>
+                      <li><a href="form_buttons.html">Form Buttons</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="general_elements.html">General Elements</a></li>
+                      <li><a href="media_gallery.html">Media Gallery</a></li>
+                      <li><a href="typography.html">Typography</a></li>
+                      <li><a href="icons.html">Icons</a></li>
+                      <li><a href="glyphicons.html">Glyphicons</a></li>
+                      <li><a href="widgets.html">Widgets</a></li>
+                      <li><a href="invoice.html">Invoice</a></li>
+                      <li><a href="inbox.html">Inbox</a></li>
+                      <li><a href="calendar.html">Calendar</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="tables.html">Tables</a></li>
+                      <li><a href="tables_dynamic.html">Table Dynamic</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="chartjs.html">Chart JS</a></li>
+                      <li><a href="chartjs2.html">Chart JS2</a></li>
+                      <li><a href="morisjs.html">Moris JS</a></li>
+                      <li><a href="echarts.html">ECharts</a></li>
+                      <li><a href="other_charts.html">Other Charts</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-clone"></i>Layouts <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="fixed_sidebar.html">Fixed Sidebar</a></li>
+                      <li><a href="fixed_footer.html">Fixed Footer</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+			  <!-- sidebar menu -->
+ <h4 class="media-heading"><strong><button type="button" class="btn btn-info btn-md btn3d">PEDI RADIOLOGIST</button></strong></h4>
+ 
+  <?php  foreach ($results as $key=>$ul)://debug($ul);die;//debug($results);die; ?>
+    <?php foreach ($ul->doctors as $OnSchedule):?>
+	<?php //debug($ul->doctors);die;?>
+	<ul class="list-group ">
+<p class="btn btn-primary btn-xs"><?= h($OnSchedule->firstname) ?></p>
+ </ul>
+</div>
+         
+			 
+	
+	<?php endforeach; ?>
+	<?php endforeach; ?>
+	
+	
+	
+	
+	
+	
+	
+<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+	
+ <h4 class="media-heading"><strong><button type="button" class="btn btn-info btn-md btn3d">peds(all Day)</button></strong></h4>
+
+<ul class="list-group ">
+ <li class="list-group-item list-group-item-danger"><h6 class="media-heading">CONSULTATION</strong></h6></li>
+  <li class="list-group-item list-group-item-danger"><h6 class="media-heading">FLUOROSCOPY</strong></h6></li>
+<li class="list-group-item list-group-item-danger"><h6 class="media-heading">HOSPITAL & ED</strong></h6></li>
+ <li class="list-group-item list-group-item-danger"><h6 class="media-heading">SEDATION</strong></h6></li>
+ </ul>
+
+
+ 
+  <?php  foreach ($results as $key=>$ul)://debug($ul);die;//debug($results);die; ?>
+   <?php //debug($ul);die;?>
+   <?php //debug($results);die;?>
+    <?php foreach ($ul->doctors as $OnSchedule):?>
+   <a href="#">
+    <?php /*debug($ul);die;*/ if($OnSchedule->OnSchedule==1 && $OnSchedule->dept_id==2){ ?><hr><?php echo  $this->html->image($OnSchedule->photo,array('width'=>'94px','class'=>"img-circle img-responsive")); ?><hr><br /><?php } ?>
+     </a>
+	
+	<?php if($OnSchedule->OnSchedule==1&& $OnSchedule->dept_id==2){ ?>
+	<strong><?= h($OnSchedule->firstname) ?> <?= h($OnSchedule->lastname) ?> <strong>
+	<strong><br /><h7>Cell:</h7><?= h($OnSchedule->Cell) ?></strong>
+	<strong><br /><h7>Pager:</h7> <?= h($OnSchedule->pager) ?></strong>
+	<strong><br /><h7>Extension: </h7><?= h($OnSchedule->Office_extension) ?></strong>
+	<?php } ?>
+              
+			 
+	
+	<?php endforeach; ?>
+	<?php endforeach; ?>
+	<hr>
+
+	</div>
+	
+	
+	
+	<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+ <h4 class="media-heading"><strong><button type="button" class="btn btn-info btn-md btn3d">IR (All Day)</button></strong></h4>
+
+ <ul class="list-group">
+ <li class="list-group-item list-group-item-success"><h6 class="media-heading"><strong>PROCEDURES</strong></h6></li>
+  <li class="list-group-item list-group-item-success"><h6 class="media-heading"><strong>CONFRENCE</strong></h6></li>
+  <li class="list-group-item list-group-item-success"><h6 class="media-heading"><strong>ALL NURSERIES</strong></h6></li>
+  <li class="list-group-item list-group-item-success"><h6 class="media-heading"><strong>OUTSIDE READS</strong></h6></li>
+ </ul>
+
+
+ 
+  <?php  foreach ($results as $key=>$ul)://debug($ul);die;//debug($results);die; ?>
+    <?php foreach ($ul->doctors as $OnSchedule):?>
+   <a href="#">
+    <?php if($OnSchedule->OnSchedule==1 && $OnSchedule->dept_id==3){ ?><hr><?php echo  $this->html->image($OnSchedule->photo,array('width'=>'94px','class'=>"img-circle img-responsive")); ?><hr><br /><?php } ?>
+     </a>
+	
+	<?php if($OnSchedule->OnSchedule==1&& $OnSchedule->dept_id==3){ ?>
+	<strong><?= h($OnSchedule->firstname) ?> <?= h($OnSchedule->lastname) ?> </strong>
+	<strong><br /><h7>Cell:</h7><?= h($OnSchedule->Cell) ?></strong>
+	<strong><br /><h7>Pager:</h7> <?= h($OnSchedule->pager) ?></strong>
+	<strong><br /><h7>Extension: </h7><?= h($OnSchedule->Office_extension) ?></strong>
+	<?php } ?>
+              
+			 
+	
+	<?php endforeach; ?>
+	<?php endforeach; ?>
+	<hr>
+
+ </div>
+	
+	<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+	
+	
+	
+ <h4 class="media-heading"><strong><button type="button" class="btn btn-info">Neuro Rad</button></strong></h4>
+
+  <?php  foreach ($results as $key=>$ul)://debug($ul);die;//debug($results);die; ?>
+    <?php foreach ($ul->doctors as $OnSchedule):?>
+   <a href="">
+   <i class="fa fa-user-md" style="font-size:24px"></i>
+    <?php  if($OnSchedule->OnSchedule==1 && $OnSchedule->dept_id==1){ ?><hr><?php echo  $this->html->image($OnSchedule->photo,array('width'=>'94px','class'=>"img-circle img-responsive",'class'=>"img-thumbnail")); /*debug($OnSchedule);die;*/?><hr><br /><?php } ?>
+     </a>
+	
+	<?php if($OnSchedule->OnSchedule==1&& $OnSchedule->dept_id==1){ ?>
+	<strong><?= h($OnSchedule->firstname) ?> <?= h($OnSchedule->lastname) ?></strong>
+	<strong><br /><h7>Cell:</h7><?= h($OnSchedule->Cell) ?></strong>
+	<strong><br /><h7>Pager:</h7> <?= h($OnSchedule->pager) ?></strong>
+	<strong><br /><h7>Extension: </h7><?= h($OnSchedule->Office_extension) ?></strong>
+	<?php } ?>
+              
+			 
+	
+	<?php endforeach; ?>
+	<?php endforeach; ?>
+	<hr>
+	
+	
+	</div>
+	
+	
+	<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count"> 
+    <h4 class="text-left"><strong><button type="button" class="btn btn-info btn-md btn3d">ANNOUNCEMENTS</button></strong></h4>
+	<strong><hr></strong>
+	
+ <button type="button" class="btn btn-success btn-xlg btn3d"><span class="glyphicon glyphicon-ok"&copy; <strong>Today-<strong><?php echo date("Y/m/d") . "<br>"; echo  date("h:i:sa");?></button>
+
+ 
+ <?php  foreach ($tset1 as $key=>$ul)://debug($ul);die;//debug($results);die; ?>
+    <?php foreach ($ul->doctors as $announce):?>
+	<?php //debug($ul['procedure_name']);die;?>
+	<?php if($announce->procedures_id==50 ){ ?>
+	<strong><br /> <?= h($announce->firstname) ?><strong>
+	<strong> <br /><?= h($announce->lastname) ?><strong>
+	<strong><br /><h7>Cell:</h7><?= h($announce->Cell) ?></strong>
+	<strong><br /><h7>Pager:</h7> <?= h($announce->pager) ?></strong>
+	<strong><br /><h7>Extension: </h7><?= h($announce->Office_extension) ?></strong>
+	<strong> <br /><?= h($ul['procedure_name']) ?><strong>
+	<?php echo  $this->html->image($announce['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announce->procedures_id==49 ){ ?>
+	<strong><br /> <?= h($announce->firstname) ?><strong>
+	<strong> <br /><?= h($announce->lastname) ?><strong>
+	<strong><br /><h7>Cell:</h7><?= h($announce->Cell) ?></strong>
+	<strong><br /><h7>Pager:</h7> <?= h($announce->pager) ?></strong>
+	<strong><br /><h7>Extension: </h7><?= h($announce->Office_extension) ?></strong>
+	<strong> <br /><?= h($ul['procedure_name']) ?><strong>
+	<?php echo  $this->html->image($announce['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announce->procedures_id==48 ){ ?>
+	<strong><br /> <?= h($announce->firstname) ?><strong>
+	<strong> <br /><?= h($announce->lastname) ?><strong>
+	<strong><br /><h7>Cell:</h7><?= h($announce->Cell) ?></strong>
+	<strong><br /><h7>Pager:</h7> <?= h($announce->pager) ?></strong>
+	<strong><br /><h7>Extension: </h7><?= h($announce->Office_extension) ?></strong>
+	<strong> <br /><?= h($ul['procedure_name']) ?><strong>
+	<?php echo  $this->html->image($announce['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announce->procedures_id==47 ){ ?>
+	<strong><br /> <?= h($announce->firstname) ?><strong>
+	<strong> <br /><?= h($announce->lastname) ?><strong>
+	<strong><br /><h7>Cell:</h7><?= h($announce->Cell) ?></strong>
+	<strong><br /><h7>Pager:</h7> <?= h($announce->pager) ?></strong>
+	<strong><br /><h7>Extension: </h7><?= h($announce->Office_extension) ?></strong>
+	<strong> <br /><?= h($ul['procedure_name']) ?><strong>
+	<?php echo  $this->html->image($announce['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announce->procedures_id==46 ){ ?>
+	<strong><br /> <?= h($announce->firstname) ?><strong>
+	<strong> <br /><?= h($announce->lastname) ?><strong>
+	<strong><br /><h7>Cell:</h7><?= h($announce->Cell) ?></strong>
+	<strong><br /><h7>Pager:</h7> <?= h($announce->pager) ?></strong>
+	<strong><br /><h7>Extension: </h7><?= h($announce->Office_extension) ?></strong>
+	<strong> <br /><?= h($ul['procedure_name']) ?><strong>
+	<?php echo  $this->html->image($announce['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	
+	<?php if($announce->procedures_id==45 ){ ?>
+	<strong><br /> <?= h($announce->firstname) ?><strong>
+	<strong> <br /><?= h($announce->lastname) ?><strong>
+	<strong><br /><h7>Cell:</h7><?= h($announce->Cell) ?></strong>
+	<strong><br /><h7>Pager:</h7> <?= h($announce->pager) ?></strong>
+	<strong><br /><h7>Extension: </h7><?= h($announce->Office_extension) ?></strong>
+	<strong> <br /><?= h($ul['procedure_name']) ?><strong>
+	<?php echo  $this->html->image($announce['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announce->procedures_id==44 ){ ?>
+	<strong><br /> <?= h($announce->firstname) ?><strong>
+	<strong> <br /><?= h($announce->lastname) ?><strong>
+	<strong> <br /><?= h($ul['procedure_name']) ?><strong>
+	<strong><br /><h7>Cell:</h7><?= h($announce->Cell) ?></strong>
+	<strong><br /><h7>Pager:</h7> <?= h($announce->pager) ?></strong>
+	<strong><br /><h7>Extension: </h7><?= h($announce->Office_extension) ?></strong>
+	<?php echo  $this->html->image($announce['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announce->procedures_id==43 ){ ?>
+	<strong><br /> <?= h($announce->firstname) ?><strong>
+	<strong> <br /><?= h($announce->lastname) ?><strong>
+	<strong><br /><h7>Cell:</h7><?= h($announce->Cell) ?></strong>
+	<strong><br /><h7>Pager:</h7> <?= h($announce->pager) ?></strong>
+	<strong><br /><h7>Extension: </h7><?= h($announce->Office_extension) ?></strong>
+	<strong> <br /><?= h($ul['procedure_name']) ?><strong>
+	<?php echo  $this->html->image($announce['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announce->procedures_id==42 ){ ?>
+	<strong><br /> <?= h($announce->firstname) ?><strong>
+	<strong> <br /><?= h($announce->lastname) ?><strong>
+	<strong><br /><h7>Cell:</h7><?= h($announce->Cell) ?></strong>
+	<strong><br /><h7>Pager:</h7> <?= h($announce->pager) ?></strong>
+	<strong><br /><h7>Extension: </h7><?= h($announce->Office_extension) ?></strong>
+	<strong> <br /><?= h($ul['procedure_name']) ?><strong>
+<?php echo  $this->html->image($announce['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announce->procedures_id==41 ){ ?>
+	<strong><br /> <?= h($announce->firstname) ?><strong>
+	<strong> <br /><?= h($announce->lastname) ?><strong>
+	<strong><br /><h7>Cell:</h7><?= h($announce->Cell) ?></strong>
+	<strong><br /><h7>Pager:</h7> <?= h($announce->pager) ?></strong>
+	<strong><br /><h7>Extension: </h7><?= h($announce->Office_extension) ?></strong>
+	<strong> <br /><?= h($ul['procedure_name']) ?><strong>
+<?php echo  $this->html->image($announce['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announce->procedures_id==40 ){ ?>
+	<strong><br /> <?= h($announce->firstname) ?><strong>
+	<strong> <br /><?= h($announce->lastname) ?><strong>
+	<strong><br /><h7>Cell:</h7><?= h($announce->Cell) ?></strong>
+	<strong><br /><h7>Pager:</h7> <?= h($announce->pager) ?></strong>
+	<strong><br /><h7>Extension: </h7><?= h($announce->Office_extension) ?></strong>
+	<strong> <br /><?= h($ul['procedure_name']) ?><strong>
+	<?php echo  $this->html->image($announce['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announce->procedures_id==39 ){ ?>
+	<strong><br /> <?= h($announce->firstname) ?><strong>
+	<strong> <br /><?= h($announce->lastname) ?><strong>
+	<strong><br /><h7>Cell:</h7><?= h($announce->Cell) ?></strong>
+	<strong><br /><h7>Pager:</h7> <?= h($announce->pager) ?></strong>
+	<strong><br /><h7>Extension: </h7><?= h($announce->Office_extension) ?></strong>
+	<strong> <br /><?= h($ul['procedure_name']) ?><strong>
+	<?php echo  $this->html->image($announce['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announce->procedures_id==38 ){ ?>
+	<strong><br /> <?= h($announce->firstname) ?><strong>
+	<strong> <br /><?= h($announce->lastname) ?><strong>
+	<strong><br /><h7>Cell:</h7><?= h($announce->Cell) ?></strong>
+	<strong><br /><h7>Pager:</h7> <?= h($announce->pager) ?></strong>
+	<strong><br /><h7>Extension: </h7><?= h($announce->Office_extension) ?></strong>
+	<strong> <br /><?= h($ul['procedure_name']) ?><strong>
+	<?php echo  $this->html->image($announce['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+<?php endforeach; ?>
+<?php endforeach; ?>
+
+</div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ 
+ 
+	
+	
+

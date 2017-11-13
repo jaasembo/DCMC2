@@ -1,0 +1,5 @@
+<?php if($announcement->doctor_id=="Dr. Gregory" && $OnSchedule->id=103){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong><br /> <?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($doctors->photo,array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>

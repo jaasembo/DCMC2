@@ -1,0 +1,11 @@
+<?php
+foreach($onSchedule as $ul){
+    echo 'This is the id: '.$ul[0]['User']['id'];
+    echo ' This is the full name: '.$ul[0]['User']['fullname'];
+
+ echo $onSchedule;
+ endforeach;
+ }
+?>
+               
+           

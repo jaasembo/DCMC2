@@ -1,0 +1,4 @@
+<?php foreach ($doctors as $doctor): ?>
+<?=$this->Form->create('doctor');?>
+<?=$this->Form->select("field[".$doctor->id."]", ['empty' => '(choose me)', 'one' =>1, 'two' => 0])?>
+<?=$this->Form->submit();?>

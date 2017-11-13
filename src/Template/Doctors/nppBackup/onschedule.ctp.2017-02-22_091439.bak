@@ -1,0 +1,101 @@
+<div class="container">
+      <div class="row">
+<div class="col-md-2 col-md-offset-1">
+    <h3><?= __('Anouncements') ?></h3>
+    <ul class="nav nav-stacked nav-pills">
+        <li><?= $this->Html->link(__('Edit Doctor')) ?> </li>
+        <li><?= $this->Form->postLink(__('Delete Doctor')) ?> </li>
+        <li><?= $this->Html->link(__('List Doctors')) ?> </li>
+        <li><?= $this->Html->link(__('New Doctor')) ?> </li>
+    </ul>
+</div>
+  <?php foreach ($onSchedule as $ul): ?>
+ <div class="col-md-2">
+            <div class="media">
+             <div class="media-body">
+             <h4 class="media-heading"><strong>Radiology Services</strong></h4>
+                <strong><?= h($ul->title) ?><strong>
+				<strong><?= h($ul->firstname) ?></strong>
+				<strong><?= h($ul->lastname) ?></strong>
+              <div>
+                <a href="#">
+                  <?php  echo  $this->html->image($ul['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+                </a>
+				<hr>
+				</div>
+				</div>
+				</div>
+				</div>
+				
+			<div class="col-md-2">
+            <div class="media">
+             <div class="media-body">
+             <h4 class="media-heading"><strong>PEDI RADIOLOGIST</strong></h4>
+                <strong><?= h($ul->title) ?><strong>
+				<strong><?= h($ul->firstname) ?></strong>
+				<strong><?= h($ul->lastname) ?></strong>
+              <div>
+                <a href="#">
+                  <?php  echo  $this->html->image($ul['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+                </a>
+				<hr>
+				</div>
+				</div>
+				</div>
+				</div>
+		<div class="col-md-2">
+		<div class="media">
+             <div class="media-body">
+                <h4 class="media-heading"><strong>peds(all Day)</strong></h4>
+                <strong><?= h($ul->title) ?><strong>
+				<strong><?= h($ul->firstname) ?></strong>
+				<strong><?= h($ul->lastname) ?></strong>
+              </div>
+			   <div>
+                <a href="#">
+                 <?php  echo  $this->html->image($ul['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+                </a>
+				<hr>
+				<h4 class="media-heading"><strong>OFFICE EXTENSION</strong></h4>
+              </div>
+            </div>
+		</div>
+		<div class="col-md-2">
+		<div class="media">
+             <div class="media-body">
+                <h4 class="media-heading"><strong>IR (All Day)</strong></h4>
+                <strong><?= h($ul->title) ?><strong>
+				<strong><?= h($ul->firstname) ?></strong>
+				<strong><?= h($ul->lastname) ?></strong>
+              </div>
+			   <div>
+                <a href="#">
+                  <?php  echo  $this->html->image($ul['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+                </a>
+				<hr>
+				<h4 class="media-heading"><strong>CELL</strong></h4>
+              </div>
+            </div>
+		</div>
+		<div class="col-md-2">
+		<div class="media">
+             <div class="media-body">
+                <h4 class="media-heading"><strong>Neuro Rad</strong></h4>
+                <strong><?= h($ul->title) ?><strong>
+				<strong><?= h($ul->firstname) ?></strong>
+				<strong><?= h($ul->lastname) ?></strong>
+              </div>
+			   <div>
+                <a href="#">
+                 <?php  echo  $this->html->image($ul['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+                </a>
+				<hr>
+				<h4 class="media-heading"><strong>PAGER</strong></h4>
+              </div>
+            </div>
+		</div>
+    </div>
+	<?php endforeach; ?>
+	</div>
+	
+

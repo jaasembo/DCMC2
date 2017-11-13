@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <?= $this->Html->charset() ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <?= $cakeDescription ?>
+    </title>
+       <?php echo $this->element('head.ctp'); ?>
+	   <?php echo $this->element('header.ctp'); ?>
+	   <?php echo $this->element('footer.ctp'); ?>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono" rel="stylesheet">
+</head>
+<div class="container-fluid">
+      <div class="row">
+<div class="doctors col-lg-12">
+<div>
+    <h3><?= __('Actions') ?></h3>
+    <ul class="nav nav-stacked nav-pills">
+        <li><?= $this->Html->link(__('New Doctor'), ['action' => 'add']) ?></li>
+		<li><?= $this->Html->link(__('OnSchedule'), ['action' => 'Onschedule']) ?></li>
+        <li class="active disabled"><?= $this->Html->link(__('List Doctors'), ['action' => 'index']) ?></li>
+    </ul>
+</div>
+    <div class="table-responsive">
+	<?=$this->Form->create('doctor');?>
+        <table class="table table-striped">
+        <thead>
+            <tr>
+               
+                <th><?= $this->Paginator->sort('firstname') ?></th>
+                <th><?= $this->Paginator->sort('lastname') ?></th>
+              
+                
+                <th><?= $this->Paginator->sort('OnSchedule') ?></th>
+               <th><?= $this->Paginator->sort('dept_id') ?></th>
+				 
+				
+            </tr>
+			
+        </thead>
+        <tbody>
+        <?php foreach ($doctors as $doctor): ?>
+		<?php //debug($doctor);die;?>
+		
+            <tr>
+                
+                <td><?= h($doctor->firstname) ?></td>
+                <td><?= h($doctor->lastname) ?></td>
+                
+                <td><?= h($doctor->OnSchedule) ?>
+				<?=$this->Form->select("field[".$doctor->id."]", ['empty' => '(choose me)', 'one' =>1, 'zero' => 0])?></td>
+                <td><?= h($doctor->dept_id) ?>
+				<?=$this->Form->select("dept[".$doctor->id."]",$dept_dropdown )?></td>
+                 
+				   <td class="actions">
+                  
+				 </tr>
+			<tr>
+			</tr>
+
+        <?php endforeach; ?>
+        </tbody>
+        </table>
+		<?= $this->Form->button(__('Submit'), ['class' => 'btn-success']) ?>
+		<?= $this->Form->end() ?>
+    </div>
+    <div class="paginator">
+        <ul class="pagination">
+            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->numbers() ?>
+            <?= $this->Paginator->next(__('next') . ' >') ?>
+        </ul>
+        <p><?= $this->Paginator->counter() ?></p>
+    </div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+

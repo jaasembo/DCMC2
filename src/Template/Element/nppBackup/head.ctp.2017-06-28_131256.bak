@@ -1,0 +1,16 @@
+<?php
+   echo $this->Html->script('jquery.min');
+	//echo $this->Html->css('dashboard.css');
+	echo $this->Html->css('bootstrap.css');
+	echo $this->Html->css('bootstrap.min.css');
+	echo $this->Html->css('bootstrap-grid.css');
+	echo $this->Html->css('bootstrap-grid.css');
+	echo $this->Html->css('bootstrap-grid.min.css');
+	echo $this->Html->css('bootstrap-grid.min.css');
+	echo $this->Html->css('bootstrap-reboot.css');
+	echo $this->Html->css('home.css');
+	echo $this->Html->charset();
+    //echo $this->Html->css('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css');
+   // echo $this->Html->script('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js');
+?>
+<title>CakePHP Tutorial by CodexWorld</title>

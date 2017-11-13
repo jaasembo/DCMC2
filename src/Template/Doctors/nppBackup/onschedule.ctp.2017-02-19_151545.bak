@@ -1,0 +1,6 @@
+<?php foreach (onSchedule as onSchedules); debug(onSchedules);die; ?>
+<div class="media-body">
+                <h4 class="media-heading"><strong>Radiology Services</strong></h4>
+				<li class="active disabled"><?= $this->Html->link(__('List Doctors'), ['action' => 'index']) ?></li>
+                
+              </div>

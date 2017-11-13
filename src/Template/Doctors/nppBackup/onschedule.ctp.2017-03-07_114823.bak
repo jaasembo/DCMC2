@@ -1,0 +1,96 @@
+<div class="container">
+      <div class="row">
+<div class="col-md-2 col-md-offset-1">
+    <h3><?= __('Anouncements') ?></h3>
+    <ul class="nav nav-stacked nav-pills">
+        <li><?= $this->Html->link(__('Edit Doctor')) ?> </li>
+        <li><?= $this->Form->postLink(__('Delete Doctor')) ?> </li>
+        <li><?= $this->Html->link(__('List Doctors')) ?> </li>
+        <li><?= $this->Html->link(__('New Doctor')) ?> </li>
+    </ul>
+</div>
+<div class="col-md-2">
+ <h4 class="media-heading"><strong>Radiology Services</strong></h4>
+ <?php $value= []; foreach ($depts as $key => $value){debug($depts[2]);die;}?>
+  <?php  foreach ($results as $key=>$ul)://debug($ul);die;//debug($results);die; ?>
+    <?php foreach ($ul->doctors as $OnSchedule):?>
+   <a href="#">
+    <?php if($OnSchedule->OnSchedule==1){ ?><?php  echo  $this->html->image($ul->doctors[0]['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?><?php } ?>
+     </a>
+	<hr>
+	<?php if($OnSchedule->OnSchedule==1){ ?>
+	<strong><?= h($OnSchedule->firstname) ?><strong>
+	<strong><?= h($OnSchedule->lastname) ?><strong>
+	<?php } ?>
+              
+			 
+	
+	<?php endforeach; ?>
+	<?php endforeach; ?>
+	<hr>
+	</div>
+	
+	<div class="col-md-2">
+ <h4 class="media-heading"><strong>peds(all Day)</strong></h4>
+  <?php  foreach ($results as $key=>$ul)://debug($ul);die;//debug($results);die; ?>
+    <?php foreach ($ul->doctors as $OnSchedule):?>
+   <a href="#">
+    <?php if($OnSchedule->OnSchedule==1) { ?><?php  echo  $this->html->image($ul->doctors[0]['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?><?php } ?>
+     </a>
+	<hr>
+	<?php if($OnSchedule->OnSchedule==1){ ?>
+	<strong><?= h($OnSchedule->firstname) ?><strong>
+	<strong><?= h($OnSchedule->lastname) ?><strong>
+	<?php } ?>
+              
+			 
+	
+	<?php endforeach; ?>
+	<?php endforeach; ?>
+	<hr>
+	</div>
+	
+	<div class="col-md-2">
+ <h4 class="media-heading"><strong>IR (All Day)</strong></h4>
+  <?php  foreach ($results as $key=>$ul)://debug($ul);die;//debug($results);die; ?>
+    <?php foreach ($ul->doctors as $OnSchedule):?>
+   <a href="#">
+    <?php if($OnSchedule->OnSchedule==1){ ?><?php  echo  $this->html->image($ul->doctors[0]['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?><?php } ?>
+     </a>
+	<hr>
+	<?php if($OnSchedule->OnSchedule==1){ ?>
+	<strong><?= h($OnSchedule->firstname) ?><strong>
+	<strong><?= h($OnSchedule->lastname) ?><strong>
+	<?php } ?>
+              
+			 
+	
+	<?php endforeach; ?>
+	<?php endforeach; ?>
+	<hr>
+	</div>
+	
+	<div class="col-md-2">
+ <h4 class="media-heading"><strong>Neuro Rad</strong></h4>
+  <?php  foreach ($results as $key=>$ul)://debug($ul);die;//debug($results);die; ?>
+    <?php foreach ($ul->doctors as $OnSchedule):?>
+   <a href="#">
+    <?php if($OnSchedule->OnSchedule==1){ ?><?php  echo  $this->html->image($ul->doctors[0]['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?><?php } ?>
+     </a>
+	<hr>
+	<?php if($OnSchedule->OnSchedule==1){ ?>
+	<strong><?= h($OnSchedule->firstname) ?><strong>
+	<strong><?= h($OnSchedule->lastname) ?><strong>
+	<?php } ?>
+              
+			 
+	
+	<?php endforeach; ?>
+	<?php endforeach; ?>
+	<hr>
+	</div>
+	
+	</div>
+	</div>
+	
+

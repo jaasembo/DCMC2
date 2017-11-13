@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="page-header">
+         <h1 class="">Bootstrap Grid (5 columns)</h1>
+
+    </div>
+     <h2 class="">Boxed grid</h2>
+
+    <div class="row show-grid">
+        <div class="col-sm-6 col-md-1-5 col-lg-2-5"><span class="">sm-6 md-1-5 lg-2-5</span>
+        </div>
+        <div class="col-sm-6 col-md-1-5 col-lg-2-5"><span class="">sm-6 md-1-5 lg-2-5</span>
+        </div>
+        <div class="col-sm-6 col-md-1-5 col-lg-1-5"><span class="">sm-6 md-1-5 lg-1-5</span>
+        </div>
+        <div class="col-sm-6 col-md-1-5 col-lg-3-5"><span class="">sm-6 md-1-5 lg-3-5</span>
+        </div>
+        <div class="col-sm-6 col-md-1-5 col-lg-1-5"><span class="">sm-6 md-1-5 lg-1-5</span>
+        </div>
+        <div class="col-sm-6 col-md-2-5 col-lg-1-5"><span class="">sm-6 md-2-5 lg-1-5</span>
+        </div>
+        <div class="col-sm-6 col-md-3-5 col-lg-2-5"><span class="">sm-6 md-3-5 lg-2-5</span>
+        </div>
+        <div class="col-sm-6 col-md-1-5 col-lg-3-5"><span class="">sm-6 md-1-5 lg-3-5</span>
+        </div>
+        <div class="col-sm-6 col-md-4-5 col-lg-1-5"><span class="">sm-6 md-4-5 lg-1-5</span>
+        </div>
+        <div class="col-sm-6 col-md-5-5 col-lg-1-5"><span class="">sm-6 md-5-5 lg-1-5</span>
+        </div>
+        <div class="col-sm-6 col-md-3-5 col-lg-1-5"><span class="">sm-6 md-3-5 lg-1-5</span>
+        </div>
+        <div class="col-sm-6 col-md-2-5 col-lg-1-5"><span class="">sm-6 md-2-5 lg-1-5</span>
+        </div>
+        <div class="col-sm-6 col-md-4-5 col-lg-1-5"><span class="">sm-6 md-4-5 lg-1-5</span>
+        </div>
+    </div>
+     <h2 class="">Full-width grid</h2>
+
+</div>
+<div class="container-fluid">
+    <div class="row show-grid">
+        <div class="col-sm-6 col-md-1-5 col-lg-2-5"><span class="">sm-6 md-1-5 lg-2-5</span>
+        </div>
+        <div class="col-sm-6 col-md-1-5 col-lg-2-5"><span class="">sm-6 md-1-5 lg-2-5</span>
+        </div>
+        <div class="col-sm-6 col-md-1-5 col-lg-1-5"><span class="">sm-6 md-1-5 lg-1-5</span>
+        </div>
+        <div class="col-sm-6 col-md-1-5 col-lg-3-5"><span class="">sm-6 md-1-5 lg-3-5</span>
+        </div>
+        <div class="col-sm-6 col-md-1-5 col-lg-1-5"><span class="">sm-6 md-1-5 lg-1-5</span>
+        </div>
+        <div class="col-sm-6 col-md-2-5 col-lg-1-5"><span class="">sm-6 md-2-5 lg-1-5</span>
+        </div>
+        <div class="col-sm-6 col-md-3-5 col-lg-2-5"><span class="">sm-6 md-3-5 lg-2-5</span>
+        </div>
+        <div class="col-sm-6 col-md-1-5 col-lg-3-5"><span class="">sm-6 md-1-5 lg-3-5</span>
+        </div>
+        <div class="col-sm-6 col-md-4-5 col-lg-1-5"><span class="">sm-6 md-4-5 lg-1-5</span>
+        </div>
+        <div class="col-sm-6 col-md-5-5 col-lg-1-5"><span class="">sm-6 md-5-5 lg-1-5</span>
+        </div>
+        <div class="col-sm-6 col-md-3-5 col-lg-1-5"><span class="">sm-6 md-3-5 lg-1-5</span>
+        </div>
+        <div class="col-sm-6 col-md-2-5 col-lg-1-5"><span class="">sm-6 md-2-5 lg-1-5</span>
+        </div>
+        <div class="col-sm-6 col-md-4-5 col-lg-1-5"><span class="">sm-6 md-4-5 lg-1-5</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<?php
+foreach($onSchedule as $ul){
+    echo $ul.'/n';
+
+ //echo $onSchedule;
+ 
+ }
+?>
+               
+           

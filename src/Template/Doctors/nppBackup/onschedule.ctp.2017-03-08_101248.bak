@@ -1,0 +1,109 @@
+
+<div class="container">
+      <div class="row">
+<div class="col-xs-12">
+<h1  class="text-center"><strong><button type="button" class="btn btn-info">Radiology Services</button></strong></h1>
+<strong><hr></strong>
+</div>
+</div>
+</div>
+<div class="container">
+      <div class="row">
+<div class="col-md-2 col-md-offset-1">
+    <h4 class="text-left"><strong><button type="button" class="btn btn-info"type="button" class="btn btn-primary">ANNOUNCEMENTS</button></strong></h4>
+	<strong><hr></strong>
+ &copy; <strong>Today-<strong><?php echo date("Y/m/d");?>
+</div>
+<div class="col-md-2">
+ <h4 class="media-heading"><strong><button type="button" class="btn btn-info">PEDI RADIOLOGIST</button></strong></h4>
+ <strong><hr></strong>
+  <?php  foreach ($results as $key=>$ul)://debug($ul);die;//debug($results);die; ?>
+    <?php foreach ($ul->doctors as $OnSchedule):?>
+	<li><strong><button type="button" class="btn btn-primary"><?= h($OnSchedule->firstname) ?></button><strong> <b> <strong><?= h($OnSchedule->lastname) ?><strong></li>
+	<li><strong><button type="button" class="btn btn-primary"><?= h($OnSchedule->lastname) ?></button><strong></li>
+              
+			 
+	
+	<?php endforeach; ?>
+	<?php endforeach; ?>
+	</div>
+	
+	<div class="col-md-2">
+ <h3 class="media-heading"><strong><button type="button" class="btn btn-info">peds(all Day)</strong></h3>
+ <strong><hr></strong>
+  <ul><h6 class="media-heading"><strong><button type="button" class="btn btn-primary">CONSULTATION</button></strong></h6></ul>
+  <ul><h6 class="media-heading"><strong><button type="button" class="btn btn-primary">FLUOROSCOPY</button></strong></h6></ul>
+  <ul><h6 class="media-heading"><strong><button type="button" class="btn btn-primary">HOSPITAL & ED</button></strong></h6></ul>
+  <ul><h6 class="media-heading"><strong><button type="button" class="btn btn-primary">SEDATION</button></strong></h6></ul>
+ <strong><hr></strong>
+ 
+  <?php  foreach ($results as $key=>$ul)://debug($ul);die;//debug($results);die; ?>
+    <?php foreach ($ul->doctors as $OnSchedule):?>
+   <a href="#">
+    <?php if($OnSchedule->OnSchedule==1 && $OnSchedule->dept_id==2) { ?><?php  echo  $this->html->image($ul->doctors[0]['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?><?php }//debug($OnSchedule);die; ?>
+     </a>
+	<hr>
+	<?php if($OnSchedule->OnSchedule==1){ ?>
+	<strong><button type="button" class="btn btn-primary"><?= h($OnSchedule->firstname) ?></button><strong>
+	<strong><button type="button" class="btn btn-primary"><?= h($OnSchedule->lastname) ?></button><strong>
+	<?php } ?>
+              
+			 
+	
+	<?php endforeach; ?>
+	<?php endforeach; ?>
+	<hr>
+	</div>
+	
+	<div class="col-md-2">
+ <h3 class="media-heading"><strong><button type="button" class="btn btn-info">IR (All Day)</button></strong></h3>
+ <strong><hr></strong>
+ <ul class="list-group">
+ <li class="list-group-item list-group-item-success"><h6 class="media-heading"><strong><button type="button" class="btn btn-primary">PROCEDURES</button></strong></h6></li>
+ <ul><h6 class="media-heading"><strong><button type="button" class="btn btn-primary">CONFRENCE</button></strong></h6></ul>
+ <ul><h6 class="media-heading"><strong>ALL NURSERIES</button></strong></h6></ul>
+ <ul><h6 class="media-heading"><strong><button type="button" class="btn btn-primary">OUTSIDE READS</button></strong></h6></ul>
+ </ul>
+  <?php  foreach ($results as $key=>$ul)://debug($ul);die;//debug($results);die; ?>
+    <?php foreach ($ul->doctors as $OnSchedule):?>
+   <a href="#">
+    <?php if($OnSchedule->OnSchedule==1 && $OnSchedule->dept_id==3){ ?><?php  echo  $this->html->image($ul->doctors[0]['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?><?php } ?>
+     </a>
+	<hr>
+	<?php if($OnSchedule->OnSchedule==1){ ?>
+	<strong><button type="button" class="btn btn-primary"><?= h($OnSchedule->firstname) ?></button><strong>
+	<strong><button type="button" class="btn btn-primary"><?= h($OnSchedule->lastname) ?></button><strong>
+	<?php } ?>
+              
+			 
+	
+	<?php endforeach; ?>
+	<?php endforeach; ?>
+	<hr>
+	</div>
+	
+	<div class="col-md-2">
+ <h4 class="media-heading"><strong><button type="button" class="btn btn-info">Neuro Rad</button></strong></h4>
+ <strong><hr></strong>
+  <?php  foreach ($results as $key=>$ul)://debug($ul);die;//debug($results);die; ?>
+    <?php foreach ($ul->doctors as $OnSchedule):?>
+   <a href="#">
+    <?php if($OnSchedule->OnSchedule==1 && $OnSchedule->dept_id==1){ ?><?php  echo  $this->html->image($ul->doctors[0]['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?><?php } ?>
+     </a>
+	<hr>
+	<?php if($OnSchedule->OnSchedule==1){ ?>
+	<strong><button type="button" class="btn btn-primary"><?= h($OnSchedule->firstname) ?></button><strong>
+	<strong><button type="button" class="btn btn-primary"><?= h($OnSchedule->lastname) ?></button><strong>
+	<?php } ?>
+              
+			 
+	
+	<?php endforeach; ?>
+	<?php endforeach; ?>
+	<hr>
+	</div>
+	
+	</div>
+	</div>
+	
+

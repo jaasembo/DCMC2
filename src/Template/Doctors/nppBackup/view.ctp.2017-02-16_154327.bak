@@ -1,0 +1,90 @@
+<div <div class="col-md-2 col-md-offset-1">
+    <h3><?= __('Actions') ?></h3>
+    <ul class="nav nav-stacked nav-pills">
+        <li><?= $this->Html->link(__('Edit Doctor'), ['action' => 'edit', $doctor->id]) ?> </li>
+        <li><?= $this->Form->postLink(__('Delete Doctor'), ['action' => 'delete', $doctor->id], ['confirm' => __('Are you sure you want to delete # {0}?', $doctor->id), 'class' => 'btn-danger']) ?> </li>
+        <li><?= $this->Html->link(__('List Doctors'), ['action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Doctor'), ['action' => 'add']) ?> </li>
+    </ul>
+</div>
+<div class="container">
+<div class="row top top-buffer">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="media">
+             <div class="media-body">
+                <h4 class="media-heading"><strong>Radiology Services</strong></h4>
+                <strong><?= h($doctor->title) ?><strong>
+				<strong><?= h($doctor->firstname) ?></strong>
+				<strong><?= h($doctor->lastname) ?></strong>
+              </div>
+			   <div>
+                <a href="#">
+                  <?php  echo  $this->html->image($doctor['photo'],array('width'=>'94px',"img-circle img-responsive")); ?>
+                </a>
+				<hr>
+				<h4 class="media-heading"><strong>PEDI RADIOLOGIST</strong></h4>
+              </div>
+            </div>
+        </div>
+		<div class="col-md-2">
+		<div class="media">
+             <div class="media-body">
+                <h4 class="media-heading"><strong>peds(all Day)</strong></h4>
+                <strong><?= h($doctor->title) ?><strong>
+				<strong><?= h($doctor->firstname) ?></strong>
+				<strong><?= h($doctor->lastname) ?></strong>
+              </div>
+			   <div>
+                <a href="#">
+                  <?php  echo  $this->html->image($doctor['photo'],array('width'=>'94px',"img-circle img-responsive")); ?>
+                </a>
+				<hr>
+				<h4 class="media-heading"><strong>OFFICE EXTENSION</strong></h4>
+              </div>
+            </div>
+		</div>
+		<div class="col-md-2">
+		<div class="media">
+             <div class="media-body">
+                <h4 class="media-heading">IR (All Day)</h4>
+                <strong><?= h($doctor->title) ?><strong>
+				<strong><?= h($doctor->firstname) ?></strong>
+				<strong><?= h($doctor->lastname) ?></strong>
+              </div>
+			   <div>
+                <a href="#">
+                  <?php  echo  $this->html->image($doctor['photo'],array('width'=>'94px',"img-circle img-responsive")); ?>
+                </a>
+				<hr>
+				<h4 class="media-heading">CELL</h4>
+              </div>
+            </div>
+		</div>
+		<div class="col-md-2">
+		<div class="media">
+             <div class="media-body">
+                <h4 class="media-heading">Neuro Rad</h4>
+                <strong><?= h($doctor->title) ?><strong>
+				<strong><?= h($doctor->firstname) ?></strong>
+				<strong><?= h($doctor->lastname) ?></strong>
+              </div>
+			   <div>
+                <a href="#">
+                  <?php  echo  $this->html->image($doctor['photo'],array('width'=>'94px',"img-circle img-responsive")); ?>
+                </a>
+				<hr>
+				<h4 class="media-heading">PAGER</h4>
+              </div>
+            </div>
+		</div>
+		
+    </div>
+</div>
+</div>
+
+        
+				 
+                   
+		
+		

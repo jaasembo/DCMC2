@@ -1,0 +1,379 @@
+object(Cake\ORM\ResultSet) {
+
+	'items' => [
+		(int) 0 => object(App\Model\Entity\Dept) {
+
+			'id' => (int) 1,
+			'deptno' => (float) 1,
+			'dname' => 'Neuro',
+			'loc' => 'Imaging',
+			'doctors' => [
+				(int) 0 => object(App\Model\Entity\Doctor) {
+
+					'id' => (int) 103,
+					'firstname' => 'Dr. Gregory',
+					'lastname' => ' House',
+					'title' => 'klgiului',
+					'photo' => 'profile_1488999981_842010.jpg',
+					'OnSchedule' => '1',
+					'name' => 'Alias',
+					'dept_id' => (int) 1,
+					'announcement_id' => (int) 0,
+					'Office_extension' => (int) 86447,
+					'Cell' => (int) 5454,
+					'Pager' => (int) 5454,
+					'[new]' => false,
+					'[accessible]' => [
+						'*' => true
+					],
+					'[dirty]' => [],
+					'[original]' => [],
+					'[virtual]' => [],
+					'[errors]' => [],
+					'[invalid]' => [],
+					'[repository]' => 'Doctors'
+				
+				},
+				(int) 1 => object(App\Model\Entity\Doctor) {
+
+					'id' => (int) 104,
+					'firstname' => 'Dr.Hawkeye',
+					'lastname' => 'Pierce',
+					'title' => 'p7[0',
+					'photo' => 'profile_1489000165_433197.jpg',
+					'OnSchedule' => '0',
+					'name' => 'wrsinc',
+					'dept_id' => (int) 1,
+					'announcement_id' => (int) 0,
+					'Office_extension' => null,
+					'Cell' => null,
+					'Pager' => null,
+					'[new]' => false,
+					'[accessible]' => [
+						'*' => true
+					],
+					'[dirty]' => [],
+					'[original]' => [],
+					'[virtual]' => [],
+					'[errors]' => [],
+					'[invalid]' => [],
+					'[repository]' => 'Doctors'
+				
+				},
+				(int) 2 => object(App\Model\Entity\Doctor) {
+
+					'id' => (int) 105,
+					'firstname' => 'Dr. Christopher ',
+					'lastname' => 'Turk',
+					'title' => 't9'-9',
+					'photo' => 'profile_1489000278_673339.jpg',
+					'OnSchedule' => '0',
+					'name' => 'wrsinc',
+					'dept_id' => (int) 1,
+					'announcement_id' => (int) 0,
+					'Office_extension' => null,
+					'Cell' => null,
+					'Pager' => null,
+					'[new]' => false,
+					'[accessible]' => [
+						'*' => true
+					],
+					'[dirty]' => [],
+					'[original]' => [],
+					'[virtual]' => [],
+					'[errors]' => [],
+					'[invalid]' => [],
+					'[repository]' => 'Doctors'
+				
+				},
+				(int) 3 => object(App\Model\Entity\Doctor) {
+
+					'id' => (int) 106,
+					'firstname' => 'Dr. Miranda ',
+					'lastname' => ' Bailey',
+					'title' => 'klgiuluijjk',
+					'photo' => 'profile_1489000387_20782.jpg',
+					'OnSchedule' => '0',
+					'name' => 'wrsinc',
+					'dept_id' => (int) 1,
+					'announcement_id' => (int) 0,
+					'Office_extension' => null,
+					'Cell' => null,
+					'Pager' => null,
+					'[new]' => false,
+					'[accessible]' => [
+						'*' => true
+					],
+					'[dirty]' => [],
+					'[original]' => [],
+					'[virtual]' => [],
+					'[errors]' => [],
+					'[invalid]' => [],
+					'[repository]' => 'Doctors'
+				
+				},
+				(int) 4 => object(App\Model\Entity\Doctor) {
+
+					'id' => (int) 107,
+					'firstname' => 'Dr John ',
+					'lastname' => 'Zoidberg',
+					'title' => 't9'-9',
+					'photo' => 'profile_1489000495_626403.jpg',
+					'OnSchedule' => '0',
+					'name' => 'wrsinc',
+					'dept_id' => (int) 1,
+					'announcement_id' => (int) 0,
+					'Office_extension' => null,
+					'Cell' => null,
+					'Pager' => null,
+					'[new]' => false,
+					'[accessible]' => [
+						'*' => true
+					],
+					'[dirty]' => [],
+					'[original]' => [],
+					'[virtual]' => [],
+					'[errors]' => [],
+					'[invalid]' => [],
+					'[repository]' => 'Doctors'
+				
+				},
+				(int) 5 => object(App\Model\Entity\Doctor) {
+
+					'id' => (int) 108,
+					'firstname' => 'Dr. Julius ',
+					'lastname' => 'Hibbert',
+					'title' => 'klgiului',
+					'photo' => 'profile_1489000558_686004.jpg',
+					'OnSchedule' => '0',
+					'name' => 'wrsinc',
+					'dept_id' => (int) 1,
+					'announcement_id' => (int) 0,
+					'Office_extension' => null,
+					'Cell' => null,
+					'Pager' => null,
+					'[new]' => false,
+					'[accessible]' => [
+						'*' => true
+					],
+					'[dirty]' => [],
+					'[original]' => [],
+					'[virtual]' => [],
+					'[errors]' => [],
+					'[invalid]' => [],
+					'[repository]' => 'Doctors'
+				
+				},
+				(int) 6 => object(App\Model\Entity\Doctor) {
+
+					'id' => (int) 109,
+					'firstname' => 'Dr. Remy ',
+					'lastname' => 'Hadley',
+					'title' => 'klgiului',
+					'photo' => 'profile_1489000736_291870.jpg',
+					'OnSchedule' => '1',
+					'name' => ' "Thirteen"',
+					'dept_id' => (int) 1,
+					'announcement_id' => (int) 0,
+					'Office_extension' => null,
+					'Cell' => null,
+					'Pager' => null,
+					'[new]' => false,
+					'[accessible]' => [
+						'*' => true
+					],
+					'[dirty]' => [],
+					'[original]' => [],
+					'[virtual]' => [],
+					'[errors]' => [],
+					'[invalid]' => [],
+					'[repository]' => 'Doctors'
+				
+				},
+				(int) 7 => object(App\Model\Entity\Doctor) {
+
+					'id' => (int) 110,
+					'firstname' => 'Dr. Derek Shepherd',
+					'lastname' => 'Shepherd',
+					'title' => 't9'-9',
+					'photo' => 'profile_1489000878_253082.jpg',
+					'OnSchedule' => '0',
+					'name' => 'wrsinc',
+					'dept_id' => (int) 1,
+					'announcement_id' => (int) 0,
+					'Office_extension' => null,
+					'Cell' => null,
+					'Pager' => null,
+					'[new]' => false,
+					'[accessible]' => [
+						'*' => true
+					],
+					'[dirty]' => [],
+					'[original]' => [],
+					'[virtual]' => [],
+					'[errors]' => [],
+					'[invalid]' => [],
+					'[repository]' => 'Doctors'
+				
+				},
+				(int) 8 => object(App\Model\Entity\Doctor) {
+
+					'id' => (int) 111,
+					'firstname' => 'Dr. Lanie',
+					'lastname' => ' Parish',
+					'title' => 't9'-9',
+					'photo' => 'profile_1489000945_509582.jpg',
+					'OnSchedule' => '0',
+					'name' => 'wrsinc',
+					'dept_id' => (int) 1,
+					'announcement_id' => (int) 0,
+					'Office_extension' => null,
+					'Cell' => null,
+					'Pager' => null,
+					'[new]' => false,
+					'[accessible]' => [
+						'*' => true
+					],
+					'[dirty]' => [],
+					'[original]' => [],
+					'[virtual]' => [],
+					'[errors]' => [],
+					'[invalid]' => [],
+					'[repository]' => 'Doctors'
+				
+				},
+				(int) 9 => object(App\Model\Entity\Doctor) {
+
+					'id' => (int) 112,
+					'firstname' => 'Dr. Addison ',
+					'lastname' => 'Montgomery',
+					'title' => 'klgiului',
+					'photo' => 'profile_1489001019_264984.jpg',
+					'OnSchedule' => '0',
+					'name' => 'wrsinc',
+					'dept_id' => (int) 1,
+					'announcement_id' => (int) 0,
+					'Office_extension' => null,
+					'Cell' => null,
+					'Pager' => null,
+					'[new]' => false,
+					'[accessible]' => [
+						'*' => true
+					],
+					'[dirty]' => [],
+					'[original]' => [],
+					'[virtual]' => [],
+					'[errors]' => [],
+					'[invalid]' => [],
+					'[repository]' => 'Doctors'
+				
+				},
+				(int) 10 => object(App\Model\Entity\Doctor) {
+
+					'id' => (int) 113,
+					'firstname' => 'Dr. Lisa ',
+					'lastname' => 'Cuddy',
+					'title' => 't9'-9',
+					'photo' => 'profile_1489001106_463134.jpg',
+					'OnSchedule' => '0',
+					'name' => 'wrsinc',
+					'dept_id' => (int) 1,
+					'announcement_id' => (int) 0,
+					'Office_extension' => null,
+					'Cell' => null,
+					'Pager' => null,
+					'[new]' => false,
+					'[accessible]' => [
+						'*' => true
+					],
+					'[dirty]' => [],
+					'[original]' => [],
+					'[virtual]' => [],
+					'[errors]' => [],
+					'[invalid]' => [],
+					'[repository]' => 'Doctors'
+				
+				},
+				(int) 11 => object(App\Model\Entity\Doctor) {
+
+					'id' => (int) 114,
+					'firstname' => 'Sanjay',
+					'lastname' => 'Gupta',
+					'title' => 'cnn',
+					'photo' => 'profile_1489089942_889007.jpg',
+					'OnSchedule' => '0',
+					'name' => 'wrsinc',
+					'dept_id' => (int) 1,
+					'announcement_id' => (int) 0,
+					'Office_extension' => (int) 86647,
+					'Cell' => (int) 2058622938,
+					'Pager' => (int) 5454,
+					'[new]' => false,
+					'[accessible]' => [
+						'*' => true
+					],
+					'[dirty]' => [],
+					'[original]' => [],
+					'[virtual]' => [],
+					'[errors]' => [],
+					'[invalid]' => [],
+					'[repository]' => 'Doctors'
+				
+				}
+			],
+			'[new]' => false,
+			'[accessible]' => [
+				'*' => true,
+				'dname' => true
+			],
+			'[dirty]' => [],
+			'[original]' => [],
+			'[virtual]' => [],
+			'[errors]' => [],
+			'[invalid]' => [],
+			'[repository]' => 'Depts'
+		
+		},
+		(int) 1 => object(App\Model\Entity\Dept) {
+
+			'id' => (int) 2,
+			'deptno' => (float) 2,
+			'dname' => 'Pedi',
+			'loc' => 'Imaging',
+			'doctors' => [],
+			'[new]' => false,
+			'[accessible]' => [
+				'*' => true,
+				'dname' => true
+			],
+			'[dirty]' => [],
+			'[original]' => [],
+			'[virtual]' => [],
+			'[errors]' => [],
+			'[invalid]' => [],
+			'[repository]' => 'Depts'
+		
+		},
+		(int) 2 => object(App\Model\Entity\Dept) {
+
+			'id' => (int) 3,
+			'deptno' => (float) 3,
+			'dname' => 'IR',
+			'loc' => 'Imaging',
+			'doctors' => [],
+			'[new]' => false,
+			'[accessible]' => [
+				'*' => true,
+				'dname' => true
+			],
+			'[dirty]' => [],
+			'[original]' => [],
+			'[virtual]' => [],
+			'[errors]' => [],
+			'[invalid]' => [],
+			'[repository]' => 'Depts'
+		
+		}
+	]
+
+}

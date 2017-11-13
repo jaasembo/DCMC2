@@ -1,0 +1,155 @@
+<div class="col-md-2 col-md-offset-1">
+    <h3><?= __('Anouncements') ?></h3>
+    <ul class="nav nav-stacked nav-pills">
+        <li><?= $this->Html->link(__('Edit Doctor')) ?> </li>
+        <li><?= $this->Form->postLink(__('Delete Doctor')) ?> </li>
+        <li><?= $this->Html->link(__('List Doctors')) ?> </li>
+        <li><?= $this->Html->link(__('New Doctor')) ?> </li>
+    </ul>
+</div>
+  <?php foreach ($onSchedule as $ul): ?>
+  <div class="container">
+  <div class="row top top-buffer">
+      <div class="row">
+<div class="col-md-2">
+            <div class="media">
+             <div class="media-body">
+                <h4 class="media-heading"><strong>Radiology Services</strong></h4>
+                <strong><?= h($ul->title) ?><strong>
+				<strong><?= h($ul->firstname) ?></strong>
+				<strong><?= h($ul->lastname) ?></strong>
+              </div>
+			   <div>
+                <a href="#">
+                  <?php  echo  $this->html->image($ul['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+                </a>
+				<hr>
+				<h4 class="media-heading"><strong>PEDI RADIOLOGIST</strong></h4>
+				<?php  echo  $this->html->image($ul['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+				<strong><?= h($ul->title) ?><strong>
+				<strong><?= h($ul->firstname) ?></strong>
+				<hr>
+				<hr>
+				<?php  echo  $this->html->image($ul['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+				<strong><?= h($ul->title) ?><strong>
+				<strong><?= h($ul->firstname) ?></strong>
+				<hr>
+				<hr>
+				<?php  echo  $this->html->image($ul['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+				<strong><?= h($ul->title) ?><strong>
+				<strong><?= h($ul->firstname) ?></strong>
+				<hr>
+				<hr>
+				<?php  echo  $this->html->image($ul['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+				<strong><?= h($ul->title) ?><strong>
+				<strong><?= h($ul->firstname) ?></strong>
+				<hr>
+				<hr>
+				<?php  echo  $this->html->image($ul['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+				<strong><?= h($ul->title) ?><strong>
+				<strong><?= h($ul->firstname) ?></strong>
+				<hr>
+				<hr>
+				<?php  echo  $this->html->image($ul['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+				<strong><?= h($ul->title) ?><strong>
+				<strong><?= h($ul->firstname) ?></strong>
+				<hr>
+				<hr>
+				<?php  echo  $this->html->image($ul['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+				<strong><?= h($ul->title) ?><strong>
+				<strong><?= h($ul->firstname) ?></strong>
+				<hr>
+				<hr>
+				<?php  echo  $this->html->image($ul['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+				<strong><?= h($ul->title) ?><strong>
+				<strong><?= h($ul->firstname) ?></strong>
+              </div>
+            </div>
+        </div>
+		<div class="col-md-2">
+		<div class="media">
+             <div class="media-body">
+                <h4 class="media-heading"><strong>peds(all Day)</strong></h4>
+                <strong><?= h($ul->title) ?><strong>
+				<strong><?= h($ul->firstname) ?></strong>
+				<strong><?= h($ul->lastname) ?></strong>
+              </div>
+			   <div>
+                <a href="#">
+                 <?php  echo  $this->html->image($ul['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+                </a>
+				<hr>
+				<h4 class="media-heading"><strong>OFFICE EXTENSION</strong></h4>
+              </div>
+            </div>
+		</div>
+		<div class="col-md-2">
+		<div class="media">
+             <div class="media-body">
+                <h4 class="media-heading"><strong>IR (All Day)</strong></h4>
+                <strong><?= h($ul->title) ?><strong>
+				<strong><?= h($ul->firstname) ?></strong>
+				<strong><?= h($ul->lastname) ?></strong>
+              </div>
+			   <div>
+                <a href="#">
+                  <?php  echo  $this->html->image($ul['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+                </a>
+				<hr>
+				<h4 class="media-heading"><strong>CELL</strong></h4>
+              </div>
+            </div>
+		</div>
+		<div class="col-md-2">
+		<div class="media">
+             <div class="media-body">
+                <h4 class="media-heading"><strong>Neuro Rad</strong></h4>
+                <strong><?= h($ul->title) ?><strong>
+				<strong><?= h($ul->firstname) ?></strong>
+				<strong><?= h($ul->lastname) ?></strong>
+              </div>
+			   <div>
+                <a href="#">
+                 <?php  echo  $this->html->image($ul['photo'],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+                </a>
+				<hr>
+				<h4 class="media-heading"><strong>PAGER</strong></h4>
+              </div>
+            </div>
+		</div>
+        </thead>
+        <tbody>
+     
+		
+            <tr>
+                <td><?= $this->Number->format($ul->id) ?></td>
+                <td><?= h($ul->firstname) ?></td>
+                <td><?= h($ul->lastname) ?></td>
+                <td><?= h($ul->title) ?></td>
+                <td><?= h($ul->photo) ?></td>
+                <td><?= h($ul->OnSchedule) ?></td>
+                    <td class="actions">
+                    <?= $this->Html->link('<span class="glyphicon glyphicon-zoom-in"></span><span class="sr-only">' . __('View') . '</span>', ['action' => 'view', $ul->id], ['escape' => false, 'class' => 'btn btn-xs btn-default', 'title' => __('View')]) ?>
+                    <?= $this->Html->link('<span class="glyphicon glyphicon-pencil"></span><span class="sr-only">' . __('Edit') . '</span>', ['action' => 'edit', $ul->id], ['escape' => false, 'class' => 'btn btn-xs btn-default', 'title' => __('Edit')]) ?>
+                    <?= $this->Form->postLink('<span class="glyphicon glyphicon-trash"></span><span class="sr-only">' . __('Delete') . '</span>', ['action' => 'delete', $ul->id], ['confirm' => __('Are you sure you want to delete # {0}?',$ul->id), 'escape' => false, 'class' => 'btn btn-xs btn-danger', 'title' => __('Delete')]) ?>
+                </td>
+            </tr>
+			<tr>
+			</tr>
+
+        <?php endforeach; ?>
+        </tbody>
+        </table>
+    </div>
+    <div class="paginator">
+        <ul class="pagination">
+            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->numbers() ?>
+            <?= $this->Paginator->next(__('next') . ' >') ?>
+        </ul>
+        <p><?= $this->Paginator->counter() ?></p>
+    </div>
+	</div>
+	</div>
+	</div>
+

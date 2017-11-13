@@ -1,0 +1,76 @@
+<?php //debug($doctors);die;?>
+ <?php  foreach ($announcements as $announcement)://debug($ul);die;//debug($results);die; ?>
+<?php //debug($doctors);die;?>
+  <strong><?= h($announcement->Holiday_name) ?><strong>
+	<?php if($announcement->doctor_id=="Dr.Hawkeye" && $OnSchedule->id=104){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong><br /> <?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($doctors->photo,array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Dr. Miranda"&& $OnSchedule->id=106){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong> <br /><?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($doctors->photo,array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Dr John "&& $OnSchedule->id=107){ ?>
+	<strong> <br /><?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong> <br /><?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($doctors->photo,array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Dr. Remy" && $OnSchedule->id=109){ ?>
+	<strong> <br /><?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong> <br /><?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($doctors->photo,array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Dr. Derek Shephard" && $OnSchedule->id=110){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong><br /> <?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($doctors->photo,array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Dr. Addison" && $OnSchedule->id=112){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong><br /> <?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($doctors->photo,array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	
+	<?php if($announcement->doctor_id=="Dr. Christopher " && $OnSchedule->id=105){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong><br /> <?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($doctors->photo,array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Dr. Lisa " && $OnSchedule->id=113){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong><br /> <?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($doctors->photo,array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Dr. Julius " && $OnSchedule->id=108){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong><br /> <?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($doctors->photo,array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Sanjay" && $OnSchedule->id=114){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong><br /> <?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($doctors->photo,array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Dr. Remy" && $OnSchedule->id=109){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong><br /> <?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($doctors->photo,array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Dr. Lanie" && $OnSchedule->id=111){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong><br /> <?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($doctors->photo,array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Dr. Derek S" && $OnSchedule->id=110){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong><br /> <?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($doctors->photo,array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Dr. Christo" && $OnSchedule->id=105){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong><br /> <?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($doctors->photo,array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+<?php endforeach; ?>

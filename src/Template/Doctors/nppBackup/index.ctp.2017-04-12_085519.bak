@@ -1,0 +1,127 @@
+<div class="container-fluid">
+      <div class="row">
+<div class="doctors col-lg-6">
+<div>
+    <h3><?= __('Actions') ?></h3>
+    <ul class="nav nav-stacked nav-pills">
+        <li><?= $this->Html->link(__('New Doctor'), ['action' => 'add']) ?></li>
+		<li><?= $this->Html->link(__('OnSchedule'), ['action' => 'onschedule']) ?></li>
+        <li class="active disabled"><?= $this->Html->link(__('List Doctors'), ['action' => 'index']) ?></li>
+    </ul>
+</div>
+    <div class="table-responsive">
+	<?=$this->Form->create('doctor');?>
+        <table class="table table-striped">
+        <thead>
+            <tr>
+               
+                <th><?= $this->Paginator->sort('firstname') ?></th>
+                <th><?= $this->Paginator->sort('lastname') ?></th>
+              
+                
+                <th><?= $this->Paginator->sort('OnSchedule') ?></th>
+               <th><?= $this->Paginator->sort('dept_id') ?></th>
+				 
+				
+            </tr>
+			
+        </thead>
+        <tbody>
+        <?php foreach ($doctors as $doctor): ?>
+		<?php //debug($doctor);die;?>
+		
+            <tr>
+                
+                <td><?= h($doctor->firstname) ?></td>
+                <td><?= h($doctor->lastname) ?></td>
+                
+                <td><?= h($doctor->OnSchedule) ?>
+				<?=$this->Form->select("field[".$doctor->id."]", ['empty' => '(choose me)', 'one' =>1, 'zero' => 0])?></td>
+                <td><?= h($doctor->dept_id) ?>
+				<?=$this->Form->select("dept[".$doctor->id."]",$dept_dropdown )?></td>
+                 
+				   <td class="actions">
+                  
+				 </tr>
+			<tr>
+			</tr>
+
+        <?php endforeach; ?>
+        </tbody>
+        </table>
+		<?= $this->Form->button(__('Submit'), ['class' => 'btn-success']) ?>
+		<?= $this->Form->end() ?>
+    </div>
+    <div class="paginator">
+        <ul class="pagination">
+            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->numbers() ?>
+            <?= $this->Paginator->next(__('next') . ' >') ?>
+        </ul>
+        <p><?= $this->Paginator->counter() ?></p>
+    </div>
+	</div>
+	<div class="row">
+	<div class="doctors col-lg-6">
+    <div class="table-responsive">
+	<div>
+    <h3><?= __('Procedures') ?></h3>
+    <ul class="nav nav-stacked nav-pills">
+        <li><?= $this->Html->link(__('New Doctor'), ['action' => 'add']) ?></li>
+		<li><?= $this->Html->link(__('OnSchedule'), ['action' => 'onschedule']) ?></li>
+        <li class="active disabled"><?= $this->Html->link(__('List Doctors'), ['action' => 'index']) ?></li>
+    </ul>
+</div>
+	<?=$this->Form->create('doctor');?>
+        <table class="table table-striped">
+        <thead>
+            <tr>
+               
+                <th><?= $this->Paginator->sort('firstname') ?></th>
+                <th><?= $this->Paginator->sort('lastname') ?></th>
+              
+                
+                <th><?= $this->Paginator->sort('Procedure') ?></th>
+             
+				 
+				
+            </tr>
+			
+        </thead>
+        <tbody>
+        <?php foreach ($doctors as $doctor): ?>
+		<?php //debug($doctor);die;?>
+		
+            <tr>
+                
+                <td><?= h($doctor->firstname) ?></td>
+                <td><?= h($doctor->lastname) ?></td>
+                
+                <td><?= h($doctor->OnSchedule) ?>
+				<td><?=$this->Form->select("field[".$doctor->id."]",['empty' => '(Select procedure)',$announc_dropdown] )?></td>             
+                 
+				   <td class="actions">
+                  
+				 </tr>
+			<tr>
+			</tr>
+
+        <?php endforeach; ?>
+        </tbody>
+        </table>
+		<?= $this->Form->button(__('Submit'), ['class' => 'btn-success']) ?>
+		<?= $this->Form->end() ?>
+    </div>
+    <div class="paginator">
+        <ul class="pagination">
+            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->numbers() ?>
+            <?= $this->Paginator->next(__('next') . ' >') ?>
+        </ul>
+        <p><?= $this->Paginator->counter() ?></p>
+    </div>
+	</div>
+	</div>
+	</div>
+	</div>
+

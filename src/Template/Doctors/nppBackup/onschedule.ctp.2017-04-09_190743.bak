@@ -1,0 +1,214 @@
+<?php echo $this->Less->less('less/styles.less');?>
+<div class="container text-center bg-info">
+      <div class="row">
+
+<div class="col-lg-2 col-lg-offset-1 well">
+
+ <h4 class="media-heading"><strong><button type="button" class="btn btn-info btn-md btn3d">PEDI RADIOLOGIST</button></strong></h4>
+ <div class="panel panel-primary">
+  <div class="panel-group">
+  <?php  foreach ($results as $key=>$ul)://debug($ul);die;//debug($results);die; ?>
+    <?php foreach ($ul->doctors as $OnSchedule):?>
+	
+<div class="panel-heading text-left">
+<table>
+  <thead>
+    <tr>
+	<th>
+<?= h($OnSchedule->firstname) ?>
+</th>
+  </tr>
+  </thead>
+</table>
+</div>         
+			 
+	
+	<?php endforeach; ?>
+	<?php endforeach; ?>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-lg-2 well">
+	
+ <h4 class="media-heading"><strong><button type="button" class="btn btn-info btn-md btn3d">peds(all Day)</button></strong></h4>
+ <div class="thumbnail text-left">
+<ul class="list-group">
+ <li class="list-group-item list-group-item-success"><h6 class="media-heading">CONSULTATION</strong></h6></li>
+  <li class="list-group-item list-group-item-success"><h6 class="media-heading">FLUOROSCOPY</strong></h6></li>
+<li class="list-group-item list-group-item-success"><h6 class="media-heading">HOSPITAL & ED</strong></h6></li>
+ <li class="list-group-item list-group-item-success"><h6 class="media-heading">SEDATION</strong></h6></li>
+ </ul>
+</div>
+<div class="thumbnail text-left">
+ 
+  <?php  foreach ($results as $key=>$ul)://debug($ul);die;//debug($results);die; ?>
+   <?php //debug($ul);die;?>
+    <?php foreach ($ul->doctors as $OnSchedule):?>
+   <a href="#">
+    <?php /*debug($ul);die;*/ if($OnSchedule->OnSchedule==1 && $OnSchedule->dept_id==2){ ?><hr><?php echo  $this->html->image($OnSchedule->photo,array('width'=>'94px','class'=>"img-circle img-responsive")); ?><hr><br /><?php } ?>
+     </a>
+	
+	<?php if($OnSchedule->OnSchedule==1&& $OnSchedule->dept_id==2){ ?>
+	<strong><?= h($OnSchedule->firstname) ?> <?= h($OnSchedule->lastname) ?> <strong>
+	<strong><br /><h7>Cell:</h7><?= h($OnSchedule->Cell) ?></strong>
+	<strong><br /><h7>Pager:</h7> <?= h($OnSchedule->pager) ?></strong>
+	<strong><br /><h7>Extension: </h7><?= h($OnSchedule->Office_extension) ?></strong>
+	<?php } ?>
+              
+			 
+	
+	<?php endforeach; ?>
+	<?php endforeach; ?>
+	<hr>
+	</div>
+	</div>
+	
+	<div class="col-lg-2 well">
+ <h4 class="media-heading"><strong><button type="button" class="btn btn-info btn-md btn3d">IR (All Day)</button></strong></h4>
+<div class="thumbnail text-left">
+ <ul class="list-group">
+ <li class="list-group-item list-group-item-success"><h6 class="media-heading"><strong>PROCEDURES</strong></h6></li>
+  <li class="list-group-item list-group-item-success"><h6 class="media-heading"><strong>CONFRENCE</strong></h6></li>
+  <li class="list-group-item list-group-item-success"><h6 class="media-heading"><strong>ALL NURSERIES</strong></h6></li>
+  <li class="list-group-item list-group-item-success"><h6 class="media-heading"><strong>OUTSIDE READS</strong></h6></li>
+ </ul>
+ </div>
+ <div class="thumbnail text-left">
+ 
+  <?php  foreach ($results as $key=>$ul)://debug($ul);die;//debug($results);die; ?>
+    <?php foreach ($ul->doctors as $OnSchedule):?>
+   <a href="#">
+    <?php if($OnSchedule->OnSchedule==1 && $OnSchedule->dept_id==3){ ?><hr><?php echo  $this->html->image($OnSchedule->photo,array('width'=>'94px','class'=>"img-circle img-responsive")); ?><hr><br /><?php } ?>
+     </a>
+	
+	<?php if($OnSchedule->OnSchedule==1&& $OnSchedule->dept_id==3){ ?>
+	<strong><?= h($OnSchedule->firstname) ?> <?= h($OnSchedule->lastname) ?> </strong>
+	<strong><br /><h7>Cell:</h7><?= h($OnSchedule->Cell) ?></strong>
+	<strong><br /><h7>Pager:</h7> <?= h($OnSchedule->pager) ?></strong>
+	<strong><br /><h7>Extension: </h7><?= h($OnSchedule->Office_extension) ?></strong>
+	<?php } ?>
+              
+			 
+	
+	<?php endforeach; ?>
+	<?php endforeach; ?>
+	<hr>
+	</div>
+ 
+	</div>
+	<div class="col-lg-2 well text-left">
+ <h4 class="media-heading"><strong><button type="button" class="btn btn-info">Neuro Rad</button></strong></h4>
+ <div class="thumbnail">
+  <?php  foreach ($results as $key=>$ul)://debug($ul);die;//debug($results);die; ?>
+    <?php foreach ($ul->doctors as $OnSchedule):?>
+   <a href="">
+   <i class="fa fa-user-md" style="font-size:24px"></i>
+    <?php  if($OnSchedule->OnSchedule==1 && $OnSchedule->dept_id==1){ ?><hr><?php echo  $this->html->image($OnSchedule->photo,array('width'=>'94px','class'=>"img-circle img-responsive",'class'=>"img-thumbnail")); /*debug($OnSchedule);die;*/?><hr><br /><?php } ?>
+     </a>
+	
+	<?php if($OnSchedule->OnSchedule==1&& $OnSchedule->dept_id==1){ ?>
+	<strong><?= h($OnSchedule->firstname) ?> <?= h($OnSchedule->lastname) ?></strong>
+	<strong><br /><h7>Cell:</h7><?= h($OnSchedule->Cell) ?></strong>
+	<strong><br /><h7>Pager:</h7> <?= h($OnSchedule->pager) ?></strong>
+	<strong><br /><h7>Extension: </h7><?= h($OnSchedule->Office_extension) ?></strong>
+	<?php } ?>
+              
+			 
+	
+	<?php endforeach; ?>
+	<?php endforeach; ?>
+	<hr>
+	</div>
+	</div>
+	<div class="col-lg-2 well text-left"> 
+    <h4 class="text-left"><strong><button type="button" class="btn btn-info btn-md btn3d">ANNOUNCEMENTS</button></strong></h4>
+	<strong><hr></strong>
+	<div class="thumbnail">
+ <button type="button" class="btn btn-success btn-sm btn3d"><span class="glyphicon glyphicon-ok"&copy; <strong>Today-<strong><?php echo date("Y/m/d") . "<br>"; echo  date("h:i:sa");?></button>
+</div>
+ <div class="thumbnail">
+ <?php //debug($docs[106]);die;?>
+ <?php  foreach ($announcements as $key=>$value)://debug($ul);die;//debug($results);die; ?>
+<?php debug($announcements);die();?>
+  <strong><?= h($announcement->Holiday_name) ?><strong>
+	<?php if($announcement->doctor_id=="Dr.Hawkeye" && $OnSchedule->id=104){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong><br /> <?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($docs[104],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Dr. Miranda "){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong> <br /><?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($docs[106],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Dr John "&& $OnSchedule->id=107){ ?>
+	<strong> <br /><?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong> <br /><?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($docs[107],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Dr. Remy" && $OnSchedule->id=109){ ?>
+	<strong> <br /><?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong> <br /><?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($docs[109],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Dr. Derek Shepherd" && $OnSchedule->id=110){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong><br /> <?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($docs[110],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Dr. Addison" && $OnSchedule->id=112){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong><br /> <?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($docs[112],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	
+	<?php if($announcement->doctor_id=="Dr. Christopher " && $OnSchedule->id==105){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong><br /> <?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($docs[105],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Dr. Lisa " && $OnSchedule->id==113){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong><br /> <?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($docs[113],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Dr. Julius " && $OnSchedule->id=108){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong><br /> <?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($docs[108],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Sanjay" && $OnSchedule->id=114){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong><br /> <?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($docs[114],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Dr. Remy  " && $OnSchedule->id=109){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong><br /> <?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($docs[109],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Dr. Lanie" && $OnSchedule->id=111){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong><br /> <?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($docs[111],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Dr. Derek S" && $OnSchedule->id=110){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong><br /> <?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($docs[110],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+	<?php if($announcement->doctor_id=="Dr. Christopher " && $OnSchedule->id=105){ ?>
+	<strong><br /> <?= h($announcement->IR_PROCEDURES) ?><strong>
+	<strong><br /> <?= h($announcement->doctor_id) ?><strong>
+	<?php echo  $this->html->image($docs[105],array('width'=>'94px','class'=>"img-circle img-responsive")); ?>
+	<?php } ?>
+<?php endforeach; ?>
+ </div>
+ </div>
+	
+	</div>
+	
+	</div>
+	
+

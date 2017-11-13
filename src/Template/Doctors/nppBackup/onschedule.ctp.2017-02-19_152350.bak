@@ -1,0 +1,7 @@
+
+<div class="media-body">
+                <h4 class="media-heading"><strong>Radiology Services</strong></h4>
+                <strong><?= h($onSchedule->title) ?><strong>
+				<strong><?= h($doctor->firstname) ?></strong>
+				<strong><?= h($doctor->lastname) ?></strong>
+              </div>

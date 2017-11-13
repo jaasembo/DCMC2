@@ -1,0 +1,11 @@
+<?php
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Imaging</title>
+    <!-- Bootstrap Core CSS -->
+     <?php //echo $this->Html->css('bootstrap.min.css');?>
+	 <?php echo $this->Html->css('dashboard.css');?>
+	 <!-- Bootstrap Core JavaScript -->
+  <?php echo $this->Html->javascript('jquery.js');?>
+ <?php echo $this->Html->javascript('bootstrap.min.js');?>
+?>
+<title>CakePHP Tutorial by CodexWorld</title>
